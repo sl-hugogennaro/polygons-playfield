@@ -15,6 +15,7 @@
   "devDependencies": {
     "@babel/cli": "^7.10.1",
     "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
     "@types/geojson": "^7946.0.7",
     "@types/mapbox-gl": "^1.10.2",
     "@types/uuid": "^8.0.0",

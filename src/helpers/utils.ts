@@ -26,7 +26,7 @@ const isGeometryCollection = (data: Geometry): data is GeometryCollection & { id
   data.type === "GeometryCollection"
 
 export const wrapF = (data: Geometry | Feature): Feature => {
-  if (isFeature(data) && !!data.id) {
+  if (isFeature(data)) {
     return data
   } else {
     const baseGeo = { type: data.type, bbox: data.bbox }

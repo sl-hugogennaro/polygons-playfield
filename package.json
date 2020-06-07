@@ -8,16 +8,18 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
-    "@types/geojson": "7946.0.7",
-    "@types/mapbox-gl": "1.8.3",
-    "@types/uuid": "8.0.0",
-    "mapbox-gl": "1.9.1",
-    "terraformer-wkt-parser": "1.2.1",
-    "typescript": "3.8.3",
-    "uuid": "8.1.0"
+    "mapbox-gl": "^1.9.1",
+    "terraformer-wkt-parser": "^1.2.1",
+    "uuid": "^8.1.0"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.6.1"
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@types/geojson": "^7946.0.7",
+    "@types/mapbox-gl": "^1.10.2",
+    "@types/uuid": "^8.0.0",
+    "parcel-bundler": "^1.6.1",
+    "typescript": "^3.9.5"
   },
   "keywords": []
 }

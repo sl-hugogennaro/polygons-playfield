@@ -1,21 +1,21 @@
-import "mapbox-gl/dist/mapbox-gl.css"
-import "./style.css"
-import { center, zoom, linestring, polygon, multipolygon, polygonWHole } from "./map/data"
-import { makeMap } from "./map/map"
-import { addGeometry } from "./map/geometry"
+import 'mapbox-gl/dist/mapbox-gl.css'
+import './style.css'
+import { center, zoom, geojsonlinestring, wktpolygonWHole } from './modules/map/data'
+import { makeMap } from './modules/map'
+import { addGeometry } from './modules/geometry'
 
 //? TODO :
 //? 1. add wkt/geojson/number[][][] with 1 function ✓
-//? 2. get center polygon/multipolygon/shape?
-//? 3. calc bounds from shape
+//? 2. calc bounds from shape
+//? 3. get center from shape
 
-//! WIP 1.
-//! add related layers
+//! WIP 2.
 
-makeMap("app", center, zoom).then((map) => {
-  addGeometry(map, center as any)
-  addGeometry(map, linestring)
-  addGeometry(map, polygon)
-  addGeometry(map, polygonWHole)
-  addGeometry(map, multipolygon)
+makeMap('app', center, zoom).then((map) => {
+  // raw point
+  addGeometry(map, [center[1], center[0]] as number[])
+  // geojson linestring
+  addGeometry(map, geojsonlinestring)
+  // wkt polygon
+  addGeometry(map, wktpolygonWHole)
 })
